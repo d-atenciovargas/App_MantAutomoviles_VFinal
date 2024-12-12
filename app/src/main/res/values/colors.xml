@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="amarillo">#FFCC00</color>
+    <color name="morado">#AF28C6</color>
+    <color name="gray">#E0E0E0</color>
+    <color name="celeste">#88d0ff</color>
+    <color name="primary">#6200EE</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="accent">#FFC107</color>
+    <color name="bodyColor">#666666</color>
+    <color name="gray_800">#2B2B3D</color>
+    <color name="gray_700">#3A3A4D</color>
+    <color name="celeste_pastel">#B3F1FE</color>
+    <color name="primary2">#1E88E5</color> <!-- Azul para botones -->
+    <color name="danger">#D32F2F</color> <!-- Rojo para botones -->
+    <color name="success">#00E676</color> <!-- Verde para valores positivos -->
+    <color name="warning">#FFA726</color> <!-- Naranja para voltaje -->
+    <color name="error">#FF5252</color> <!-- Rojo para temperatura -->
+    <color name="text_secondary">#AAAAAA</color> <!-- Gris para subtítulos -->
+    <color name="blue">#2196F3</color>
+    <color name="red">#F44336</color>
+    <color name="griceaseo">#ececec</color>
+</resources>

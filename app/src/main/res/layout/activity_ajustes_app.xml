@@ -1,0 +1,127 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+    <!-- Contenedor para el título -->
+    <FrameLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3F1FE"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/flecha_hacia_atras"
+            android:contentDescription="Regresar"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:id="@+id/titleAjustes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ajustes"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <!-- Contenido principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Checkbox para seguro -->
+            <CheckBox
+                android:id="@+id/notificaciones_seguro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordatorio de vencimiento de seguro"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <!-- Checkbox para revisión técnica -->
+            <CheckBox
+                android:id="@+id/notificaciones_revision_tecnica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordatorio de vencimiento de revisión técnica"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <!-- Checkbox para mantenimiento -->
+            <CheckBox
+                android:id="@+id/notificaciones_mantenimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordatorio de mantenimiento"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <!-- Checkbox para permiso de circulación -->
+            <CheckBox
+                android:id="@+id/notificaciones_permiso_circulacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordatorio de permiso de circulación"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+            <!-- Configuración de días de antelación -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Configurar días de antelación"
+                android:textSize="18sp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinner_dias_anticipacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+
+            <!-- Botón para guardar ajustes -->
+            <Button
+                android:id="@+id/btn_preview_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vista previa de Notificación"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/celeste_pastel"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <!-- Botón para guardar ajustes -->
+            <Button
+                android:id="@+id/guardar_ajustes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Ajustes"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/celeste_pastel"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

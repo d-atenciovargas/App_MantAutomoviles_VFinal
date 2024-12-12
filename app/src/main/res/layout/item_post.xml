@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:clipToPadding="false"
+    android:backgroundTint="@android:color/background_light"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <!-- Cabecera: Avatar, Nombre y Correo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Avatar (placeholder circular) -->
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/avatar"
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle_background2" />
+
+
+        <!-- Nombre y Correo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del usuario"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo del usuario"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Contenido del post -->
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contenido del post"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="4dp" />
+
+    <!-- Botones de acción -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:backgroundTint="@color/red"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp" />
+
+        <Button
+            android:id="@+id/respond_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responder"
+            android:backgroundTint="@color/blue"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp" />
+    </LinearLayout>
+
+    <!-- Contenedor de respuestas -->
+    <LinearLayout
+        android:id="@+id/responses_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:background="@android:color/background_light"
+        android:elevation="2dp">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/toggle_responses_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver respuestas"
+        android:textColor="@color/primary2"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:padding="4dp" />
+
+</LinearLayout>

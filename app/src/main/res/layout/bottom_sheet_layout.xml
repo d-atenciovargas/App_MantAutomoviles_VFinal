@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Cabecera fija -->
+    <LinearLayout
+        android:id="@+id/titulo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/holo_blue_dark"
+        android:elevation="8dp">
+
+        <!-- Título del lugar -->
+        <TextView
+            android:id="@+id/location_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:paddingBottom="8dp" />
+
+        <!-- Dirección -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_marginEnd="8dp"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/location_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Contenido desplazable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Horario de atención -->
+            <TextView
+                android:id="@+id/opening_hours_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Horario de Atención:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/opening_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:paddingBottom="8dp" />
+
+            <!-- Número de teléfono -->
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:paddingBottom="8dp" />
+
+            <!-- Página web -->
+            <TextView
+                android:id="@+id/website_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:paddingBottom="16dp"
+                android:autoLink="web" />
+
+            <!-- Calificación con estrellas -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/rating_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calificación:"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginEnd="8dp" />
+
+                <RatingBar
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    android:isIndicator="true"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <!-- Opiniones -->
+            <TextView
+                android:id="@+id/reviews_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opiniones"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:id="@+id/reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- Galería de fotos -->
+            <TextView
+                android:id="@+id/photos_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fotos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:textColor="@android:color/black" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/image_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <!-- Botones de acción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingBottom="16dp">
+
+                <Button
+                    android:id="@+id/btn_call"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@android:drawable/ic_menu_call"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/white"
+                    android:text="Llamar"
+                    android:padding="12dp"
+                    android:layout_margin="4dp" />
+
+                <Button
+                    android:id="@+id/btn_website"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@android:drawable/ic_menu_info_details"
+                    android:drawablePadding="8dp"
+                    android:backgroundTint="@android:color/holo_blue_dark"
+                    android:textColor="@android:color/white"
+                    android:text="Sitio web"
+                    android:padding="12dp"
+                    android:layout_margin="4dp" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_start_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
+                android:text="INICIAR NAVEGACIÓN"
+                android:padding="12dp"
+                android:layout_margin="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

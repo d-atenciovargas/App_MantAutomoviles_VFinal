@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Encabezado similar al activity_menu -->
+    <LinearLayout
+        android:id="@+id/titulo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3F1FE"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center"> <!-- Centrado -->
+
+        <TextView
+            android:id="@+id/titulo_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Auto"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Instrucciones para seleccionar o desmarcar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cuando se selecciona el auto, debe presionar el botón &quot;Aceptar&quot; para grabar su selección. En caso que lo quiera desmarcar, debe repetir el mismo proceso anterior: desmarcar y presionar el botón &quot;Aceptar&quot;."
+        android:textSize="17sp"
+        android:textColor="@android:color/black"
+        android:lineSpacingExtra="4dp"
+        android:justificationMode="inter_word"
+        android:gravity="start" />
+
+
+
+    <!-- Contenedor de autos -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/autos_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#B3F1FE">
+
+        <!-- Opción 1: Ir al menú -->
+        <LinearLayout
+            android:id="@+id/regresar_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/flecha_hacia_atras"
+                android:contentDescription="Ir al menú" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regresar"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Opción 2: Aceptar selección -->
+        <LinearLayout
+            android:id="@+id/aceptar_seleccion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/controlar__1_"
+                android:contentDescription="Aceptar selección" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceptar"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

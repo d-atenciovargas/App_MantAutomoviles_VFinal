@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1B1B2F">
+
+    <!-- Contenedor para el título -->
+    <RelativeLayout
+        android:id="@+id/titleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2E2E44"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:elevation="8dp">
+
+        <!-- Botón de flecha para regresar -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/flecha_hacia_atras"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/simulador_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Simulador OBD2"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <!-- Contenedor de Información del Auto -->
+    <LinearLayout
+        android:id="@+id/auto_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/card_background"
+        android:elevation="4dp">
+</LinearLayout>
+
+
+    <!-- Contenedor de Indicadores -->
+    <LinearLayout
+        android:id="@+id/indicators_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <!-- Indicador de RPM -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/rpm_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6754"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#00E676" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RPM"
+                android:textSize="18sp"
+                android:textColor="#AAAAAA" />
+        </LinearLayout>
+
+        <!-- Indicador de Voltaje -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/voltage_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.5V"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFA726" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voltaje"
+                android:textSize="18sp"
+                android:textColor="#AAAAAA" />
+        </LinearLayout>
+
+        <!-- Indicador de Temperatura -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/temperature_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="32°C"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FF5252" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:textSize="18sp"
+                android:textColor="#AAAAAA" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botones de Inicio -->
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="INICIAR"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1E88E5"
+            android:elevation="8dp" />
+    </LinearLayout>
+
+    <!-- Códigos de Error Detectados -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/error_codes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+</LinearLayout>

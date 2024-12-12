@@ -1,0 +1,134 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ForoComunitario">
+
+    <!-- Título del foro -->
+    <LinearLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/celeste_pastel"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Título del foro -->
+        <TextView
+            android:id="@+id/foro_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Foro Comunitario"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <!-- RecyclerView para mostrar las publicaciones -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/title_container"
+        app:layout_constraintBottom_toTopOf="@+id/barra_navegacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Barra de navegación -->
+    <LinearLayout
+        android:id="@+id/barra_navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#B3F1FE"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Volver -->
+        <LinearLayout
+            android:id="@+id/volver_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/nav_back_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/flecha_hacia_atras"
+                android:contentDescription="Volver" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Agregar Post -->
+        <LinearLayout
+            android:id="@+id/agregar_post_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/fab_add_post"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/agregar_publicacion"
+                android:contentDescription="Agregar publicación" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar Post"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- WhatsApp Soporte -->
+        <LinearLayout
+            android:id="@+id/soporte_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/fab_whatsapp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/whatsapp"
+                android:contentDescription="Soporte Técnico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soporte"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/celeste_pastel"
+    app:cardForegroundColor="@drawable/ripple_effect"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Título del código -->
+        <TextView
+            android:id="@+id/btnCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Código" />
+
+        <!-- Icono o descripción adicional -->
+        <TextView
+            android:id="@+id/descripcionCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tap para más detalles"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
